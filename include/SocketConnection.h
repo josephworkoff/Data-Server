@@ -1,16 +1,5 @@
 /*!	\file SocketConnection.h 
 *	\brief  SocketConnection header file.
-*
-*   \b Author: Joseph Workoff\n
-*   \b Major: CS/SD MS\n
-*   \b Creation Date: 04/01/2021\n
-*   \b Due Date: 05/06/2021\n
-*   \b Course: CSC552\n
-*   \b Professor Name: Dr. Spiegel\n
-*   \b Assignment: #3\n
-*   \b Filename: SocketConnection.h\n
-*   \b Purpose: Define an active socket connection wrapper class.\n
-*   \n
 *   A SocketConnection object represents an active connection with another process through a socket. \n
 *   Messages can be sent through the encapsulated socket by calling its read and write methods.\n
 *   

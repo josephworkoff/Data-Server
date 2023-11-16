@@ -1,16 +1,5 @@
 /*!	\file SemaphoreSet.h 
 *	\brief  SemaphoreSet header file.
-*
-*   \b Author: Joseph Workoff\n
-*   \b Major: CS/SD MS\n
-*   \b Creation Date: 04/01/2021\n
-*   \b Due Date: 05/06/2021\n
-*   \b Course: CSC552\n
-*   \b Professor Name: Dr. Spiegel\n
-*   \b Assignment: #3\n
-*   \b Filename: SemaphoreSet.h\n
-*   \b Purpose: Define a wrapper class for a set of semaphores synchronizing read and write operations on critical sections.\n
-*   \n
 *   A SemaphoreSet object represents a set of 3 pre-initialized system semaphores used to synchronize read and write operations on critical sections.\n
 *   It uses the 3 semaphores to implement the Readers-Writers algorithm, where the first represents the ReaderCount mutex, the second counts the number of readers, and the third represents the write mutex.\n
 *   

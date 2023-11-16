@@ -1,16 +1,5 @@
 /*!	\file CriticalFile.h 
-*	\brief  CriticalFile header file.
-*
-*   \b Author: Joseph Workoff\n
-*   \b Major: CS/SD MS\n
-*   \b Creation Date: 04/01/2021\n
-*   \b Due Date: 05/06/2021\n
-*   \b Course: CSC552\n
-*   \b Professor Name: Dr. Spiegel\n
-*   \b Assignment: #3\n
-*   \b Filename: CriticalFile.h\n
-*   \b Purpose: Define a wrapper class for a file representing a critical section.\n
-*   \n
+*	\brief  Define a wrapper class for a file representing a critical section.
 *   A CriticalFile object represents an open file which is read from and written to concurrently, conferring a critical section. \n
 *   The file is a binary file whose contents are structured using the struct type used to construct the object. \n
 *   A CriticalFile object supports read, update, append, and record count operations on the file. \n

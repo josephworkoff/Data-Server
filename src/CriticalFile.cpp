@@ -1,17 +1,5 @@
 /*!	\file CriticalFile.cpp
 *	\brief  CriticalFile class implementation file.
-*
-*   \b Author: Joseph Workoff\n
-*   \b Major: CS/SD MS\n
-*   \b Creation Date: 04/01/2021\n
-*   \b Due Date: 05/06/2021\n
-*   \b Course: CSC552\n
-*   \b Professor Name: Dr. Spiegel\n
-*   \b Assignment: #3\n
-*   \b Filename: CriticalFile.cpp\n
-*   \b Purpose: Implement the CriticalFile class.\n
-*   \n
-*
 */
 
 #include "CriticalFile.h"
@@ -19,14 +7,6 @@
 template class CriticalFile<Record>;
 template class CriticalFile<Server_Log_Entry>;
 template class CriticalFile<Client_Log_Entry>;
-
-
-// void TemporaryFunction (){
-//     CriticalFile<Record> recordFile = CriticalFile<Record>(-1, SemaphoreSet(-1, -1) );
-//     CriticalFile<Server_Log_Entry> serverFile = CriticalFile<Server_Log_Entry>(-1, SemaphoreSet(-1, -1) );
-//     CriticalFile<Client_Log_Entry> clientFile = CriticalFile<Client_Log_Entry>(-1, SemaphoreSet(-1, -1) );
-// }
-
 
 /*!
 *	\brief Constructs a CriticalFile.

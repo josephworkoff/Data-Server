@@ -1,16 +1,5 @@
 /*!	\file Server.h 
 *	\brief  Server class header file.
-*
-*   \b Author: Joseph Workoff\n
-*   \b Major: CS/SD MS\n
-*   \b Creation Date: 04/01/2021\n
-*   \b Due Date: 05/06/2021\n
-*   \b Course: CSC552\n
-*   \b Professor Name: Dr. Spiegel\n
-*   \b Assignment: #3\n
-*   \b Filename: Server.h\n
-*   \b Purpose: Define a child data server class.\n
-*   \n
 *   A Server object represents a child data server. \n
 *   It handles all communication with a single client and all operations on data requested by that client. \n
 *   The operation lifetime of a Server is its run method. \n

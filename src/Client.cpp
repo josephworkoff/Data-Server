@@ -1,17 +1,5 @@
 /*!	\file Client.cpp
 *	\brief  Client class implementation file.
-*
-*   \b Author: Joseph Workoff\n
-*   \b Major: CS/SD MS\n
-*   \b Creation Date: 04/01/2021\n
-*   \b Due Date: 05/06/2021\n
-*   \b Course: CSC552\n
-*   \b Professor Name: Dr. Spiegel\n
-*   \b Assignment: #3\n
-*   \b Filename: Client.cpp\n
-*   \b Purpose: Implement the Client class.\n
-*   \n
-*
 */
 
 #include "Client.h"
@@ -85,7 +73,7 @@ X)Exit\n\
             server reply to that command. 
         */
 
-        if ( (ret = select(maxfd, &readfds, NULL, NULL, NULL) ) == -1 ){
+        if ( (select(maxfd, &readfds, NULL, NULL, NULL) ) == -1 ){
             perror("Select");
         }
         else{
@@ -160,8 +148,6 @@ bool Client::menuSwitch(char choice){
         connectedClientsInfo();
         break;
     case 'X': //Exit
-        // printf("Exiting.\n");
-        // kill(getpid(), SIGINT);
         return false;
     default:
         printf("Invalid\n");
@@ -324,8 +310,7 @@ void Client::printRecords(std::vector<Record> &records){
     prompt(buf);
 
     for (Record r: records){
-
-        printf("%*d | %7.2f% | %6.2f% | %5.2f% | %5.2f%\n", 
+        printf("%*d | %7.2f%% | %6.2f%% | %5.2f%% | %5.2f%%\n", 
         7, r.month,
         r.android, 
         r.ios, 

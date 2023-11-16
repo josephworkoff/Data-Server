@@ -1,17 +1,5 @@
 /*!	\file SharedMemory.cpp
 *	\brief  SharedMemory class implementation file.
-*
-*   \b Author: Joseph Workoff\n
-*   \b Major: CS/SD MS\n
-*   \b Creation Date: 04/01/2021\n
-*   \b Due Date: 05/06/2021\n
-*   \b Course: CSC552\n
-*   \b Professor Name: Dr. Spiegel\n
-*   \b Assignment: #3\n
-*   \b Filename: SharedMemory.cpp\n
-*   \b Purpose: Implement the SharedMemory class.\n
-*   \n
-*
 */
 
 #include "SharedMemory.h"
@@ -73,9 +61,6 @@ SharedMemory::SharedMemory(pid_t pid, SemaphoreSet ss) :
 *	\brief Destructor. Deallocates the shared memory and semaphores.
 */
 SharedMemory::~SharedMemory(){
-
-    // printf("~shmem\n");
-
     sems.writerLock();
 
     releaseCell();
@@ -90,7 +75,6 @@ SharedMemory::~SharedMemory(){
         shmctl(shmemid,IPC_RMID,0);
         sems.destroySemaphores();
 
-        //this will break if a new client has connected in the meantime.
     }
     else{
         sems.writerUnlock();

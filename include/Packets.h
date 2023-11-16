@@ -1,15 +1,5 @@
 /*!	\file Packets.h
 *	\brief  Header file for packet structs.
-*
-*   \b Author: Joseph Workoff\n
-*   \b Major: CS/SD MS\n
-*   \b Creation Date: 04/01/2021\n
-*   \b Due Date: 05/06/2021\n
-*   \b Course: CSC552\n
-*   \b Professor Name: Dr. Spiegel\n
-*   \b Assignment: #3\n
-*   \b Filename: Packets.h\n
-*   \b Purpose: Struct definitions for message packets.\n
 *   \n
 *   This file defines several common structs to be used to send and receive data through the socket. 
 */
@@ -19,7 +9,6 @@
 
 #include <stdio.h>
 #include <sys/ipc.h>
-// #include <sys/msg.h>
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -48,6 +37,7 @@ struct Record{
     float kaios;
     float other;
 };
+
 
 /*!
 *   \struct Record_Message

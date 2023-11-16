@@ -1,16 +1,5 @@
 /*!	\file Client.h 
 *	\brief Client class header file.
-*
-*   \b Author: Joseph Workoff\n
-*   \b Major: CS/SD MS\n
-*   \b Creation Date: 04/01/2021\n
-*   \b Due Date: 05/06/2021\n
-*   \b Course: CSC552\n
-*   \b Professor Name: Dr. Spiegel\n
-*   \b Assignment: #3\n
-*   \b Filename: Client.h\n
-*   \b Purpose: Define a client program class.\n
-*   \n
 *   A Client object represents a connected client process. \n
 *   It handles all communication with a single data server. \n
 *   The operation lifetime of a Client is its run method. \n

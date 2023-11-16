@@ -1,16 +1,5 @@
 /*!	\file p3cli.cpp 
 *	\brief  Client program for a data server application.
-*
-*   \b Author: Joseph Workoff\n
-*   \b Major: CS/SD MS\n
-*   \b Creation Date: 04/01/2021\n
-*   \b Due Date: 05/06/2021\n
-*   \b Course: CSC552\n
-*   \b Professor Name: Dr. Spiegel\n
-*   \b Assignment: #3\n
-*   \b Filename: p3cli.cpp\n
-*   \b Purpose: Send commands to a server program using sockets.\n
-*   \n
 *   This application will connect to a server program through a socket. 
 *   Once connected, it presents a user menu, and sends user-input requests to the server to perform read and write operations on the server's data file. 
 *   All operations are logged in a machine-specific log file. 
@@ -54,8 +43,8 @@ int main(int argc, char const *argv[]){
 
     //open log file
 
-    char hostbuf[256];
-    gethostname(hostbuf, 256);
+    char hostbuf[128];
+    gethostname(hostbuf, 128);
 
     char logbuf[256];
     sprintf(logbuf, "logs/log-%s.cli", hostbuf);
@@ -66,7 +55,6 @@ int main(int argc, char const *argv[]){
         exit(1);
     }
 
-
     const int socketfd = socket(AF_INET, SOCK_STREAM, 0); //create socket
     if (socketfd == -1){
         perror("Socket: ");
@@ -76,23 +64,15 @@ int main(int argc, char const *argv[]){
     socklen_t sockAddrLength = sizeof(sockaddr_in);
 
     if (connect(socketfd, (sockaddr *)&serverAddress, sockAddrLength) == -1){ //connect endpoints
-
         if (errno == ECONNREFUSED){
             printf("Server is not online.\n");
-            
         }
         else{
             perror("Connect: ");
         }
-
     }
     else{
-        // printf("Connected.\n");
-        // write(socketfd);
-
-
         int semid = SemaphoreSet::createSemaphores(getuid(), 2);
-        // printf("semid=%d\n", semid);
 
         Client *client = new Client(socketfd, logfd, serverAddress, semid);
         client->run();

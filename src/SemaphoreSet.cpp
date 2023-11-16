@@ -1,17 +1,5 @@
 /*!	\file SemaphoreSet.cpp
 *	\brief  SemaphoreSet class implementation file.
-*
-*   \b Author: Joseph Workoff\n
-*   \b Major: CS/SD MS\n
-*   \b Creation Date: 04/01/2021\n
-*   \b Due Date: 05/06/2021\n
-*   \b Course: CSC552\n
-*   \b Professor Name: Dr. Spiegel\n
-*   \b Assignment: #3\n
-*   \b Filename: SemaphoreSet.cpp\n
-*   \b Purpose: Implement the SemaphoreSet class.\n
-*   \n
-*
 */
 
 #include "SemaphoreSet.h"

@@ -1,16 +1,5 @@
 /*!	\file SharedMemory.h 
 *	\brief  SharedMemory header file.
-*
-*   \b Author: Joseph Workoff\n
-*   \b Major: CS/SD MS\n
-*   \b Creation Date: 04/01/2021\n
-*   \b Due Date: 05/06/2021\n
-*   \b Course: CSC552\n
-*   \b Professor Name: Dr. Spiegel\n
-*   \b Assignment: #3\n
-*   \b Filename: SharedMemory.h\n
-*   \b Purpose: Define a shared memory process table wrapper class.\n
-*   \n
 *   A SharedMemory object encapsulates access to a table of client process information stored in shared memory shared by all clients on the machine. \n
 *   The table begins with a single integer field storing the number of clients currently connected on that machine.\n
 *   The rest represents a table containing information on each process: its process id, total number of commands issued, connection time, and time of last command.\n
